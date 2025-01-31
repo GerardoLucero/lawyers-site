@@ -20,7 +20,7 @@ function Services() {
                 {services.map((service, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
                         <Card>
-                            <img src={service.image} alt={service.title} style={{ width: "100%", height: "200px", objectFit: "cover" }} />
+                            <img src={service.image} alt={service.title} style={{ width: "100%", height: "300px", objectFit: "cover" }} />
                             <CardContent>
                                 <Typography variant="h6">{service.title}</Typography>
                                 <Typography>{service.description}</Typography>

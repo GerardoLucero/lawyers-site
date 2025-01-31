@@ -16,7 +16,7 @@ function Home() {
                     <Card>
                         <CardMedia
                             component="img"
-                            height="250"
+                            height="350"
                             image={office}
                             alt="Oficina de abogados"
                         />
@@ -32,7 +32,7 @@ function Home() {
                     <Card>
                         <CardMedia
                             component="img"
-                            height="250"
+                            height="350"
                             image={legal}
                             alt="Equipo legal"
                         />
