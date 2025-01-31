@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Typography, Grid, Card, CardContent, CardMedia } from "@mui/material";
+import office from '../assets/law-office.jpg'
+import legal from '../assets/legal-team.jpg'
 
 function Home() {
     return (
@@ -15,7 +17,7 @@ function Home() {
                         <CardMedia
                             component="img"
                             height="250"
-                            image="/src/assets/law-office.jpg"
+                            image={office}
                             alt="Oficina de abogados"
                         />
                         <CardContent>
@@ -31,7 +33,7 @@ function Home() {
                         <CardMedia
                             component="img"
                             height="250"
-                            image="/src/assets/legal-team.jpg"
+                            image={legal}
                             alt="Equipo legal"
                         />
                         <CardContent>
