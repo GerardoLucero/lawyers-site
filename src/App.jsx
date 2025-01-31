@@ -13,22 +13,12 @@ function App() {
             <Header />
             <main className="flex-grow">
                 <Routes>
-                    <Route path="/" element={<Home />} />
                     <Route path="/services" element={<Services />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
                 <section id="home">
                     <Home />
-                </section>
-                <section id="services">
-                    <Services />
-                </section>
-                <section id="about">
-                    <About />
-                </section>
-                <section id="contact">
-                    <Contact />
                 </section>
             </main>
             <Footer />
