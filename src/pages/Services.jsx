@@ -1,11 +1,15 @@
 import React from "react";
 import { Container, Grid, Card, CardContent, Typography } from "@mui/material";
+import criminal from '../assets/criminal-law.jpg' 
+import laboral from '../assets/labor-law.jpg'
+import corporate from  '../assets/corporate-law.jpg' 
+import intellectual from '../assets/intellectual-property.jpg'
 
 const services = [
-    { title: "Derecho Penal", description: "Defensa legal en procesos judiciales.", image: '../assets/criminal-law.jpg' },
-    { title: "Derecho Laboral", description: "Asesoría y defensa en conflictos laborales.", image: '../assets/labor-law.jpg' },
-    { title: "Derecho Corporativo", description: "Consultoría y asesoría a empresas.", image: '../assets/corporate-law.jpg' },
-    { title: "Propiedad Intelectual", description: "Protección de marcas y patentes.", image: '../assets/intellectual-property.jpg' }
+    { title: "Derecho Penal", description: "Defensa legal en procesos judiciales.", image: criminal},
+    { title: "Derecho Laboral", description: "Asesoría y defensa en conflictos laborales.", image: laboral },
+    { title: "Derecho Corporativo", description: "Consultoría y asesoría a empresas.", image: corporate },
+    { title: "Propiedad Intelectual", description: "Protección de marcas y patentes.", image: intellectual}
 ];
 
 function Services() {
