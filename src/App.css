@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 80px 20px; /* Espaciado entre secciones */
+  min-height: 100vh; /* Ocupa toda la pantalla */
+}
