@@ -1,0 +1,36 @@
+name: Deploy Vite App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Ejecuta el workflow cuando haya cambios en la rama principal
+
+  workflow_dispatch:  # Permite ejecutar el workflow manualmente
+
+permissions:
+  contents: write  # Permiso necesario para subir archivos a GitHub Pages
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18  # Ajusta la versión de Node.js si es necesario
+          cache: 'npm'  # Cambia a 'yarn' si usas Yarn
+
+      - name: Install dependencies
+        run: npm install  # Usa 'yarn install' si usas Yarn
+
+      - name: Build project
+        run: npm run build  # Asegúrate de que el script "build" esté en package.json
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # Desplegar en la rama gh-pages
+          folder: dist  # Ajusta si tu carpeta de salida es diferente
