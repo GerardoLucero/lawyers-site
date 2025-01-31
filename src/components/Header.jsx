@@ -13,7 +13,7 @@ function Header() {
                             variant="h6" 
                             sx={{ fontWeight: 'bold', letterSpacing: 1.5, textTransform: 'uppercase' }}
                         >
-                            Bufete de Abogados
+                            Olmedo Gonzalez 
                         </Typography>
                     </Box>
 

@@ -8,8 +8,7 @@ import intellectual from '../assets/intellectual-property.jpg'
 const services = [
     { title: "Derecho Penal", description: "Defensa legal en procesos judiciales.", image: criminal},
     { title: "Derecho Laboral", description: "Asesoría y defensa en conflictos laborales.", image: laboral },
-    { title: "Derecho Corporativo", description: "Consultoría y asesoría a empresas.", image: corporate },
-    { title: "Propiedad Intelectual", description: "Protección de marcas y patentes.", image: intellectual}
+    { title: "Derecho Corporativo", description: "Consultoría y asesoría a empresas.", image: corporate }
 ];
 
 function Services() {
