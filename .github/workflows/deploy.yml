@@ -13,6 +13,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      artifact_name: ${{ steps.set_output.outputs.artifact_name }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,6 +30,23 @@ jobs:
 
       - name: Build project
         run: npm run build  # Asegúrate de que el script "build" esté en package.json
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: vite-build
+          path: dist  # Ajusta si tu carpeta de salida es diferente
+          retention-days: 1  # Mantiene el build por un día
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build  # Espera a que termine el job de build antes de desplegar
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: vite-build
+          path: dist  # Ajusta si tu carpeta de salida es diferente
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
