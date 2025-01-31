@@ -17,7 +17,7 @@ function About() {
                     <Card>
                         <CardMedia
                             component="img"
-                            height="200"
+                            height="350"
                             image={partner1}
                             alt="Abogado 1"
                         />
@@ -31,7 +31,7 @@ function About() {
                     <Card>
                         <CardMedia
                             component="img"
-                            height="200"
+                            height="350"
                             image={partner2}
                             alt="Abogada 2"
                         />
@@ -45,7 +45,7 @@ function About() {
                     <Card>
                         <CardMedia
                             component="img"
-                            height="200"
+                            height="350"
                             image={partner3}
                             alt="Abogado 3"
                         />

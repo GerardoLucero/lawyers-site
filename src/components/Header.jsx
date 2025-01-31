@@ -9,11 +9,6 @@ function Header() {
                 <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
                     {/* LOGO */}
                     <Box display="flex" alignItems="center">
-                        <img 
-                            src="/lawyers-site/logo.png" 
-                            alt="Bufete de Abogados" 
-                            style={{ height: 40, marginRight: 16 }} 
-                        />
                         <Typography 
                             variant="h6" 
                             sx={{ fontWeight: 'bold', letterSpacing: 1.5, textTransform: 'uppercase' }}
