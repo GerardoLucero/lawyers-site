@@ -18,48 +18,7 @@ function Header() {
                     </Box>
 
                     {/* MENÚ */}
-                    <Box>
-                        <Button 
-                            color="inherit" 
-                            component={Link} 
-                            to="/" 
-                            sx={{ fontSize: '16px', textTransform: 'uppercase', fontWeight: 'bold', mx: 1 }}
-                        >
-                            Inicio
-                        </Button>
-                        <Button 
-                            color="inherit" 
-                            component={Link} 
-                            to="/services" 
-                            sx={{ fontSize: '16px', textTransform: 'uppercase', fontWeight: 'bold', mx: 1 }}
-                        >
-                            Servicios
-                        </Button>
-                        <Button 
-                            color="inherit" 
-                            component={Link} 
-                            to="/about" 
-                            sx={{ fontSize: '16px', textTransform: 'uppercase', fontWeight: 'bold', mx: 1 }}
-                        >
-                            Nosotros
-                        </Button>
-                        <Button 
-                            color="inherit" 
-                            component={Link} 
-                            to="/contact" 
-                            sx={{
-                                fontSize: '16px',
-                                textTransform: 'uppercase',
-                                fontWeight: 'bold',
-                                mx: 1,
-                                border: '2px solid white',
-                                padding: '6px 16px',
-                                borderRadius: '8px'
-                            }}
-                        >
-                            Contacto
-                        </Button>
-                    </Box>
+
                 </Toolbar>
             </Container>
         </AppBar>
