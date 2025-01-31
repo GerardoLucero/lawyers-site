@@ -13,8 +13,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
-      artifact_name: ${{ steps.set_output.outputs.artifact_name }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -42,6 +40,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build  # Espera a que termine el job de build antes de desplegar
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4  # 🔹 Agrega esto para inicializar el repo correctamente
+
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
