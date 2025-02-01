@@ -26,8 +26,7 @@ function App() {
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            textAlign: 'center',
-                            px: 3
+                            textAlign: 'center'
                         }}
                     >
                         {/* Capa oscura para mejorar legibilidad */}
