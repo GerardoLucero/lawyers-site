@@ -1,11 +1,16 @@
 import React from "react";
 import { Container, Typography, TextField, Button } from "@mui/material";
+import theme from '../theme';
 
 function Contact() {
     return (
         <Container>
-            <Typography variant="h3" gutterBottom>Contacto</Typography>
-            <Typography>Déjanos un mensaje y nos pondremos en contacto contigo.</Typography>
+            <Typography variant="h3" gutterBottom sx={{ color: theme.palette.text.primary }}>
+                Contacto
+            </Typography>
+            <Typography sx={{ color: theme.palette.text.secondary }}>
+                Déjanos un mensaje y nos pondremos en contacto contigo.
+            </Typography>
 
             <form style={{ marginTop: "20px" }}>
                 <TextField fullWidth label="Nombre" margin="normal" />

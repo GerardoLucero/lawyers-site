@@ -1,10 +1,11 @@
 import React from 'react';
 import { Box, Typography, Container, Grid, Link, Divider } from '@mui/material';
+import theme from '../theme';
 
 function Footer() {
     return (
         <Box sx={{ 
-            backgroundColor: '#1C3D5A', 
+            backgroundColor: theme.palette.primary.main, 
             color: 'white', 
             py: 4, 
             mt: 4 
