@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
-import { Box, Container, Typography, Button } from '@mui/material';
+import { Box, Container, Typography, Button, CssBaseline } from '@mui/material';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Services from './pages/Services';
@@ -12,6 +12,7 @@ import theme from './theme';
 function App() {
     return (
         <ThemeProvider theme={theme}>
+            <CssBaseline /> 
             <div className="flex flex-col min-h-screen" style={{ backgroundColor: theme.palette.background.default, fontFamily: theme.typography.fontFamily }}>
                 <Header />
                 <main className="flex-grow" style={{ fontFamily: theme.typography.fontFamily }}>
