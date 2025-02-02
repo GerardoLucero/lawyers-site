@@ -56,7 +56,7 @@ function Services() {
             </Typography>
             <Slider {...settings}>
                 {services.map((service, index) => (
-                    <Box key={index} sx={{ padding: 2, display: 'flex', justifyContent: 'center' }}>
+                    <Box key={index} sx={{ padding: 2, display: 'flex', justifyContent: 'center', width: "100%" }}>
                         <Card sx={{ backgroundColor: theme.palette.background.paper, borderRadius: '4px', overflow: 'hidden', boxShadow: 2, textAlign: 'center', width: 320 }}>
                             <Box sx={{ position: 'relative' }}>
                                 <img src={service.image} alt={service.title} style={{ width: "100%", height: "250px", objectFit: "cover", borderRadius: '4px 4px 0 0' }} />
