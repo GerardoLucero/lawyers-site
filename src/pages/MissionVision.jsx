@@ -1,20 +1,38 @@
 import React from "react";
-import { Container, Typography, Card } from "@mui/material";
+import { Container, Typography, Box, Card, CardContent } from "@mui/material";
 
 function MissionVision() {
     return (
-        <Container>
-            <Typography variant="h3" gutterBottom sx={{ textAlign: 'center', fontWeight: 'bold', mb: 4 }}>
+        <Container sx={{ py: 5 }}>
+            <Typography 
+                variant="h3" 
+                fontWeight="bold" 
+                sx={{ textAlign: 'center', mb: 4, color: 'primary.main', textTransform: 'uppercase', letterSpacing: 2 }}
+            >
                 Nuestra Misión y Visión
             </Typography>
-            <Card sx={{ p: 4, mb: 4 }}>
-                <Typography variant="h5" fontWeight="bold">Misión</Typography>
-                <Typography>Nuestra misión es brindar asesoramiento legal de calidad, protegiendo los derechos de nuestros clientes con compromiso y ética.</Typography>
-            </Card>
-            <Card sx={{ p: 4 }}>
-                <Typography variant="h5" fontWeight="bold">Visión</Typography>
-                <Typography>Ser la firma legal de referencia en la región, garantizando justicia y equidad en cada caso que representamos.</Typography>
-            </Card>
+            <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, justifyContent: 'center' }}>
+                <Card sx={{ p: 4, maxWidth: 500, textAlign: 'center', boxShadow: 3, backgroundColor: 'background.paper' }}>
+                    <CardContent>
+                        <Typography variant="h5" fontWeight="bold" sx={{ mb: 2, color: 'primary.main' }}>
+                            Misión
+                        </Typography>
+                        <Typography sx={{ fontSize: '1.1rem', color: 'text.secondary' }}>
+                            Brindar asesoramiento legal de calidad, protegiendo los derechos de nuestros clientes con compromiso y ética, garantizando su seguridad jurídica.
+                        </Typography>
+                    </CardContent>
+                </Card>
+                <Card sx={{ p: 4, maxWidth: 500, textAlign: 'center', boxShadow: 3, backgroundColor: 'background.paper' }}>
+                    <CardContent>
+                        <Typography variant="h5" fontWeight="bold" sx={{ mb: 2, color: 'primary.main' }}>
+                            Visión
+                        </Typography>
+                        <Typography sx={{ fontSize: '1.1rem', color: 'text.secondary' }}>
+                            Ser la firma legal de referencia en la región, impulsando la equidad y la justicia con profesionalismo y excelencia.
+                        </Typography>
+                    </CardContent>
+                </Card>
+            </Box>
         </Container>
     );
 }
