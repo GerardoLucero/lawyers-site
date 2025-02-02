@@ -1,8 +1,23 @@
 import React, { useState } from "react";
 import { Container, Typography, Box, Grid, Card, CardContent, IconButton } from "@mui/material";
+import { Gavel, Balance, Article, CorporateFare, Business, Policy, EditNote, Groups, AccountBalance, Work, Assignment, PersonSearch } from "@mui/icons-material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import theme from "../theme";
+
+const iconsMap = {
+    "Asesoramiento Legal": <Gavel fontSize="large" sx={{ color: theme.palette.primary.main, mr: 1 }} />,
+    "Defensa en Juicios Penales": <Balance fontSize="large" sx={{ color: theme.palette.primary.main, mr: 1 }} />,
+    "Recursos y Apelaciones": <Article fontSize="large" sx={{ color: theme.palette.primary.main, mr: 1 }} />,
+    "Negociación de Acuerdos y Conformidades": <CorporateFare fontSize="large" sx={{ color: theme.palette.primary.main, mr: 1 }} />,
+    "Libertad Condicional y Beneficios Penitenciarios": <Business fontSize="large" sx={{ color: theme.palette.primary.main, mr: 1 }} />,
+    "Investigación y Recopilación de Pruebas": <PersonSearch fontSize="large" sx={{ color: theme.palette.primary.main, mr: 1 }} />,
+    "Asistencia en Declaraciones y Detenciones": <Policy fontSize="large" sx={{ color: theme.palette.primary.main, mr: 1 }} />,
+    "Asesoría Legal para Empresas": <Groups fontSize="large" sx={{ color: theme.palette.primary.main, mr: 1 }} />,
+    "Constitución de Sociedades": <AccountBalance fontSize="large" sx={{ color: theme.palette.primary.main, mr: 1 }} />,
+    "Redacción de Estatutos y Contratos": <Work fontSize="large" sx={{ color: theme.palette.primary.main, mr: 1 }} />,
+    "Redacción de Poderes": <EditNote fontSize="large" sx={{ color: theme.palette.primary.main, mr: 1 }} />,
+};
 
 const services = [
     { title: "Asesoramiento Legal", description: "Orientación y consejo legal sobre derechos y obligaciones en casos penales, explicando posibles consecuencias legales." },
@@ -36,9 +51,12 @@ function Services() {
                     <Grid item xs={12} sm={6} md={4} key={index}>
                         <Card sx={{ backgroundColor: theme.palette.background.paper, boxShadow: 3, borderRadius: 2, p: 2, height: "100%" }}>
                             <CardContent>
-                                <Typography variant="h6" fontWeight="bold" sx={{ color: theme.palette.text.primary, mb: 1 }}>
-                                    {service.title}
-                                </Typography>
+                                <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
+                                    {iconsMap[service.title]}
+                                    <Typography variant="h6" fontWeight="bold" sx={{ color: theme.palette.text.primary }}>
+                                        {service.title}
+                                    </Typography>
+                                </Box>
                                 <Typography sx={{ color: theme.palette.text.secondary, fontSize: "1rem" }}>
                                     {service.description}
                                 </Typography>
