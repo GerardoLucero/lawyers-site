@@ -1,15 +1,11 @@
 import React from 'react';
-import { Box, Typography, Container, Grid, Link, Divider } from '@mui/material';
+import { Box, Typography, Container, Grid, Link, Divider, IconButton } from '@mui/material';
+import { Facebook, Twitter, LinkedIn, WhatsApp } from '@mui/icons-material';
 import theme from '../theme';
 
 function Footer() {
     return (
-        <Box sx={{ 
-            backgroundColor: theme.palette.primary.main, 
-            color: 'white', 
-            py: 4, 
-            mt: 4 
-        }}>
+        <Box sx={{ backgroundColor: theme.palette.primary.main, color: 'white', py: 4, mt: 4 }}>
             <Container maxWidth="lg">
                 <Grid container spacing={4} justifyContent="center">
                     {/* Columna 1: Información */}
@@ -42,6 +38,23 @@ function Footer() {
 
                 {/* Línea divisoria */}
                 <Divider sx={{ my: 3, backgroundColor: 'white', opacity: 0.2 }} />
+
+                {/* Redes Sociales */}
+                <Box sx={{ textAlign: 'center', mt: 2 }}>
+                    <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 1 }}>Síguenos en</Typography>
+                    <IconButton href="https://wa.me/525512345678" target="_blank" sx={{ color: 'white' }}>
+                        <WhatsApp fontSize="large" />
+                    </IconButton>
+                    <IconButton href="https://www.facebook.com/tuempresa" target="_blank" sx={{ color: 'white' }}>
+                        <Facebook fontSize="large" />
+                    </IconButton>
+                    <IconButton href="https://twitter.com/tuempresa" target="_blank" sx={{ color: 'white' }}>
+                        <Twitter fontSize="large" />
+                    </IconButton>
+                    <IconButton href="https://www.linkedin.com/company/tuempresa" target="_blank" sx={{ color: 'white' }}>
+                        <LinkedIn fontSize="large" />
+                    </IconButton>
+                </Box>
 
                 {/* Derechos reservados */}
                 <Box sx={{ textAlign: 'center', mt: 2 }}>
